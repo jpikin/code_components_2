@@ -1,10 +1,17 @@
-function Verdict({temp}) {
-    return ( <>
-    <p>{temp <= 0 && <span>Лёд</span>}
-    {/* {100 > temp > 0 && <span>Вода</span>} */}
-    {temp > 100 && <span>Пар</span>}
-    </p>
-    </> );
-}
+export default function Verdict({ temp }) {
 
-export default Verdict;
+    const calkTemp = () => {
+        if (!isNaN(parseFloat(temp))) {
+            if (temp <= 0) return <span>Лёд</span>
+            else if (temp >= 1 && temp < 100) return <span>Вода</span>
+            else if (temp >= 100) return <span>Пар</span>
+        }
+        else return <span></span>
+    }
+
+    return (
+        <p>
+            {calkTemp()}
+        </p>
+    );
+}

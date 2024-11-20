@@ -4,11 +4,13 @@ import {useState} from 'react';
 
 export default function Calculator() {
 
-    const [temp, setTemp] = useState('1');
+    const [temp, setTemp] = useState();
     
     return  <div>
+    <p>Введите температуру воды</p>
+    <TempInp temp={temp} setTemp={setTemp} />
 		<Verdict temp={temp} />
-		<TempInp temp={temp} setTemp={setTemp} />
+		
     </div> 
 }
 
