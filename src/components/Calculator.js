@@ -4,7 +4,7 @@ import {useState} from 'react';
 
 export default function Calculator() {
 
-    const [temp, setTemp] = useState(0);
+    const [temp, setTemp] = useState('1');
     
     return  <div>
 		<Verdict temp={temp} />
