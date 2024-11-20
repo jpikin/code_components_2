@@ -4,7 +4,7 @@ function TempInp({temp, setTemp}) {
     
     return ( 
     <>
-    <input onChange={(event)=> setTemp(event.target.value)}/>
+    <input temp={temp} onChange={(event)=> setTemp(event.target.value)}/>
     </>
  );
 }
